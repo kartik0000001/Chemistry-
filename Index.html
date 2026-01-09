@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smile Generator 😄</title>
+  <style>
+    body {
+      background: linear-gradient(120deg, #ffdd00, #ff6f61);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background: white;
+      color: #ff6f61;
+      transition: 0.3s;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+    #msg {
+      margin-top: 20px;
+      font-size: 28px;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1>Click for Happiness 🌈</h1>
+    <button onclick="makeHappy()">Click Me 😁</button>
+    <div id="msg"></div>
+  </div>
+
+  <script>
+    const happyMessages = [
+      "You are awesome 😎",
+      "Smile! You're doing great 🌟",
+      "Believe in yourself 💪",
+      "Today is a good day 🌞",
+      "You just made this code happy too 🤖❤️"
+    ];
+
+    function makeHappy() {
+      const msg = happyMessages[Math.floor(Math.random() * happyMessages.length)];
+      document.getElementById("msg").innerText = msg;
+    }
+  </script>
+
+</body>
+</html>
